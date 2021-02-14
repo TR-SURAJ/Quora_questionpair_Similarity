@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Quora question pair similarity
+		</div>
+		<h2>Quora question pair similarity</h2>
+		
+    	</div>
+	</header>
+	
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+    		<p>Enter Your Message Here</p>
+    		<textarea name="message1" rows="10" cols="50"></textarea>
+    		<br/>
+    		<textarea name="message2" rows="10" cols="50"></textarea>
+    		<br/>
+            <input type="submit" class="btn-info" value="predict">
+		</form>
+		
+	</div>
+	
+</body>
+</html>
+	
+	

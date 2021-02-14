@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+
+    		<h2>Quora question-pair similarity</h2>
+		
+    	</div>
+	</header>
+	
+	
+	
+	<div class="results">
+
+        {% if prediction == 1%}
+    	<h2 style="color:red;">Duplicate</h2>
+    	{% elif prediction == 0%}
+    	<h2 style="color:green;">Not Duplicate</h2>
+    	{% endif %}
+
+	</div>
+	
+</body>
+</html>
